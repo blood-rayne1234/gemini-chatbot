@@ -44,6 +44,8 @@ export const useChatStore = create(
       hasMore: true,
       page: 0,
       pageSize: 20,
+      darkMode: false,
+      toggleDarkMode: () => set((state) => ({ darkMode: !state.darkMode })),
 
       // Chatroom actions
       createChatroom: (title) => {
@@ -215,7 +217,8 @@ export const useChatStore = create(
       name: 'chat-storage',
       partialize: (state) => ({ 
         chatrooms: state.chatrooms,
-        messages: state.messages 
+        messages: state.messages,
+        darkMode: state.darkMode 
       }),
     }
   )
