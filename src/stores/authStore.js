@@ -1,6 +1,5 @@
-import React from 'react'
 import { create } from 'zustand';
-import {persist } from 'zustand/middleware';
+import { persist } from 'zustand/middleware';
 
 export const useAuthStore = create(
   persist(
